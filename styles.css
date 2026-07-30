@@ -1,4 +1,4 @@
-/* ————— Bitácora de entrenamiento — estilo clásico de imprenta ————— */
+/* ————— Bitácora de entrenamiento — estilo clásico, tipografía JetBrains Mono ————— */
 
 :root {
   --paper: #f7f5ee;
@@ -20,9 +20,9 @@ body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
-  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
-  font-size: 15px;
-  line-height: 1.45;
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 13px;
+  line-height: 1.55;
   font-variant-numeric: tabular-nums;
 }
 
@@ -41,24 +41,24 @@ a:hover { text-decoration-color: var(--ink); }
 
 .masthead-date {
   margin: 0 0 10px;
-  font-size: 12px;
-  letter-spacing: 0.14em;
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--muted);
 }
 
 .masthead h1 {
   margin: 0;
-  font-size: 46px;
-  line-height: 1.05;
+  font-size: 31px;
+  line-height: 1.1;
   font-weight: 700;
   letter-spacing: 0.02em;
 }
 
 .masthead-sub {
   margin: 8px 0 14px;
-  font-size: 13px;
-  letter-spacing: 0.18em;
+  font-size: 11px;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--ink-soft);
 }
@@ -71,7 +71,7 @@ a:hover { text-decoration-color: var(--ink); }
 
 .status-line {
   margin: 10px 0 0;
-  font-size: 12.5px;
+  font-size: 11px;
   color: var(--muted);
   font-style: italic;
 }
@@ -81,7 +81,7 @@ a:hover { text-decoration-color: var(--ink); }
   border: 1px solid var(--red);
   color: var(--red);
   padding: 10px 14px;
-  font-size: 13.5px;
+  font-size: 12px;
   margin-bottom: 24px;
 }
 
@@ -103,21 +103,21 @@ a:hover { text-decoration-color: var(--ink); }
 
 .summary-cell .num {
   display: block;
-  font-size: 30px;
-  line-height: 1.1;
+  font-size: 24px;
+  line-height: 1.15;
   font-weight: 700;
 }
 .summary-cell .lbl {
   display: block;
   margin-top: 3px;
-  font-size: 11px;
-  letter-spacing: 0.14em;
+  font-size: 9.5px;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--muted);
 }
 .summary-cell .sub {
   display: block;
-  font-size: 12px;
+  font-size: 10.5px;
   color: var(--ink-soft);
   margin-top: 2px;
 }
@@ -131,9 +131,9 @@ section { margin-bottom: 40px; }
   align-items: center;
   gap: 14px;
   margin: 0 0 14px;
-  font-size: 13px;
+  font-size: 11.5px;
   font-weight: 700;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 .section-title::after {
@@ -149,14 +149,14 @@ section { margin-bottom: 40px; }
 table.ledger {
   width: 100%;
   border-collapse: collapse;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 table.ledger th {
   text-align: left;
-  font-size: 10.5px;
+  font-size: 9.5px;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--ink-soft);
   padding: 4px 10px 6px;
@@ -196,7 +196,7 @@ table.ledger th.num-col { text-align: right; }
   flex-wrap: wrap;
   gap: 8px 26px;
   margin-top: 10px;
-  font-size: 12.5px;
+  font-size: 11px;
   color: var(--ink-soft);
 }
 .chart-legend .item { display: inline-flex; align-items: center; gap: 8px; }
@@ -214,13 +214,13 @@ table.ledger th.num-col { text-align: right; }
 
 .panel h3 {
   margin: 0 0 2px;
-  font-size: 21px;
+  font-size: 17px;
   font-weight: 700;
 }
 
 .panel .panel-sub {
   margin: 0 0 12px;
-  font-size: 12px;
+  font-size: 10.5px;
   color: var(--muted);
   font-style: italic;
 }
@@ -232,7 +232,7 @@ table.ledger th.num-col { text-align: right; }
   align-items: baseline;
   gap: 6px;
   padding: 3.5px 0;
-  font-size: 13.5px;
+  font-size: 12px;
 }
 .stat-row .k { color: var(--ink-soft); }
 .stat-row .leader-dots {
@@ -244,9 +244,9 @@ table.ledger th.num-col { text-align: right; }
 
 .mini-title {
   margin: 14px 0 6px;
-  font-size: 10.5px;
+  font-size: 9.5px;
   font-weight: 700;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--muted);
 }
@@ -268,7 +268,7 @@ table.ledger th.num-col { text-align: right; }
 .strip-caption {
   display: flex;
   justify-content: space-between;
-  font-size: 11px;
+  font-size: 9.5px;
   color: var(--muted);
   margin-top: 3px;
 }
@@ -276,23 +276,23 @@ table.ledger th.num-col { text-align: right; }
 /* barras (temas y dificultad) */
 .bar-row {
   display: grid;
-  grid-template-columns: 92px 1fr 2.2em;
+  grid-template-columns: 100px 1fr 2.2em;
   align-items: center;
   gap: 8px;
   padding: 2.5px 0;
-  font-size: 12.5px;
+  font-size: 11px;
 }
 .bar-row .bl { color: var(--ink-soft); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .bar-row .bar { height: 8px; background: var(--hairline-soft); position: relative; }
 .bar-row .bar i { position: absolute; inset: 0 auto 0 0; background: var(--ink); }
 .bar-row .bn { text-align: right; color: var(--ink-soft); }
 
-.none-note { font-size: 12.5px; color: var(--muted); font-style: italic; }
+.none-note { font-size: 11px; color: var(--muted); font-style: italic; }
 
 /* ————— Pie ————— */
 
 .colophon { margin-top: 30px; text-align: center; }
-.colophon p { font-size: 12.5px; color: var(--muted); margin-top: 12px; }
+.colophon p { font-size: 11px; color: var(--muted); margin-top: 12px; }
 
 /* ————— Responsive ————— */
 
@@ -301,5 +301,5 @@ table.ledger th.num-col { text-align: right; }
   .summary-strip { grid-template-columns: repeat(2, 1fr); }
   .summary-cell:nth-child(n+3) { border-top: 1px solid var(--hairline); }
   .summary-cell:nth-child(3) { border-left: none; }
-  .masthead h1 { font-size: 34px; }
+  .masthead h1 { font-size: 24px; }
 }
