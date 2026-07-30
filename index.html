@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cogiendo Peso — Bitácora de Entrenamiento</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="masthead">
+    <p class="masthead-date" id="masthead-date"></p>
+    <h1>Cogiendo Peso</h1>
+    <p class="masthead-sub">Bitácora de entrenamiento &middot; Programación competitiva</p>
+    <div class="rule-double"></div>
+    <p class="status-line">
+      <span id="status-text">Cargando datos de la hoja&hellip;</span>
+      &middot;
+      <a href="#" id="refresh-now">actualizar ahora</a>
+    </p>
+  </header>
+
+  <div id="error-banner" class="error-banner" hidden></div>
+
+  <section id="team-summary" class="summary-strip"></section>
+
+  <section>
+    <h2 class="section-title">Tabla general</h2>
+    <div class="table-scroll">
+      <table class="ledger" id="leaderboard"></table>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">Progreso acumulado</h2>
+    <div id="cumulative-chart" class="chart-box"></div>
+  </section>
+
+  <section>
+    <h2 class="section-title">Por persona</h2>
+    <div id="person-panels" class="panels"></div>
+  </section>
+
+  <section>
+    <h2 class="section-title">Actividad reciente</h2>
+    <div class="table-scroll">
+      <table class="ledger" id="recent-feed"></table>
+    </div>
+  </section>
+
+  <footer class="colophon">
+    <div class="rule-double"></div>
+    <p>Fuente: <a id="sheet-link" href="#" target="_blank" rel="noopener">hoja de cálculo del equipo</a>
+    &middot; se actualiza automáticamente cada 60&nbsp;segundos.</p>
+  </footer>
+
+</div>
+<script src="app.js"></script>
+</body>
+</html>

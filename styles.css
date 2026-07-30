@@ -1,0 +1,305 @@
+/* ————— Bitácora de entrenamiento — estilo clásico de imprenta ————— */
+
+:root {
+  --paper: #f7f5ee;
+  --ink: #1d1b16;
+  --ink-soft: #4c473c;
+  --muted: #71695a;
+  --hairline: #d9d4c5;
+  --hairline-soft: #e6e2d5;
+  --green: #2d6a3f;
+  --ochre: #93611c;
+  --red: #9c3122;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
+  font-size: 15px;
+  line-height: 1.45;
+  font-variant-numeric: tabular-nums;
+}
+
+.wrap {
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 34px 26px 60px;
+}
+
+a { color: inherit; text-decoration: underline; text-decoration-color: var(--muted); text-underline-offset: 2px; }
+a:hover { text-decoration-color: var(--ink); }
+
+/* ————— Cabecera ————— */
+
+.masthead { text-align: center; margin-bottom: 30px; }
+
+.masthead-date {
+  margin: 0 0 10px;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.masthead h1 {
+  margin: 0;
+  font-size: 46px;
+  line-height: 1.05;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.masthead-sub {
+  margin: 8px 0 14px;
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.rule-double {
+  border-top: 3px solid var(--ink);
+  padding-top: 2px;
+  border-bottom: 1px solid var(--ink);
+}
+
+.status-line {
+  margin: 10px 0 0;
+  font-size: 12.5px;
+  color: var(--muted);
+  font-style: italic;
+}
+.status-line a { font-style: normal; }
+
+.error-banner {
+  border: 1px solid var(--red);
+  color: var(--red);
+  padding: 10px 14px;
+  font-size: 13.5px;
+  margin-bottom: 24px;
+}
+
+/* ————— Resumen del equipo ————— */
+
+.summary-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  margin-bottom: 34px;
+}
+
+.summary-cell {
+  padding: 14px 10px 12px;
+  text-align: center;
+}
+.summary-cell + .summary-cell { border-left: 1px solid var(--hairline); }
+
+.summary-cell .num {
+  display: block;
+  font-size: 30px;
+  line-height: 1.1;
+  font-weight: 700;
+}
+.summary-cell .lbl {
+  display: block;
+  margin-top: 3px;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.summary-cell .sub {
+  display: block;
+  font-size: 12px;
+  color: var(--ink-soft);
+  margin-top: 2px;
+}
+
+/* ————— Secciones ————— */
+
+section { margin-bottom: 40px; }
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 0 0 14px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+.section-title::after {
+  content: "";
+  flex: 1;
+  border-top: 1px solid var(--ink);
+}
+
+/* ————— Tablas ————— */
+
+.table-scroll { overflow-x: auto; }
+
+table.ledger {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+table.ledger th {
+  text-align: left;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  padding: 4px 10px 6px;
+  border-bottom: 1.5px solid var(--ink);
+  white-space: nowrap;
+}
+
+table.ledger td {
+  padding: 7px 10px;
+  border-bottom: 1px solid var(--hairline);
+  vertical-align: top;
+}
+
+table.ledger tr:last-child td { border-bottom: none; }
+
+table.ledger .num-col { text-align: right; }
+table.ledger th.num-col { text-align: right; }
+
+.rank { color: var(--muted); width: 1.6em; }
+.leader td { font-weight: 700; }
+.person-name { font-weight: 700; }
+
+.estado-resuelto { color: var(--green); }
+.estado-upsolveado { color: var(--ochre); }
+.estado-otro { color: var(--muted); }
+
+.stale { color: var(--red); }
+.fresh { color: var(--green); }
+.dim { color: var(--muted); }
+
+/* ————— Gráfica acumulada ————— */
+
+.chart-box svg { display: block; width: 100%; height: auto; }
+
+.chart-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 26px;
+  margin-top: 10px;
+  font-size: 12.5px;
+  color: var(--ink-soft);
+}
+.chart-legend .item { display: inline-flex; align-items: center; gap: 8px; }
+.chart-legend svg { width: 30px; height: 8px; }
+
+/* ————— Paneles por persona ————— */
+
+.panels {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.panel { border-top: 2.5px solid var(--ink); padding-top: 10px; }
+
+.panel h3 {
+  margin: 0 0 2px;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.panel .panel-sub {
+  margin: 0 0 12px;
+  font-size: 12px;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.stat-list { margin: 0 0 16px; }
+
+.stat-row {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  padding: 3.5px 0;
+  font-size: 13.5px;
+}
+.stat-row .k { color: var(--ink-soft); }
+.stat-row .leader-dots {
+  flex: 1;
+  border-bottom: 1px dotted var(--hairline);
+  transform: translateY(-3px);
+}
+.stat-row .v { font-weight: 700; white-space: nowrap; }
+
+.mini-title {
+  margin: 14px 0 6px;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* tira de actividad (28 días) */
+.day-strip { display: flex; gap: 2px; }
+.day-strip .cell {
+  flex: 1;
+  height: 13px;
+  background: var(--hairline-soft);
+  outline: 1px solid rgba(29, 27, 22, 0.07);
+  outline-offset: -1px;
+}
+.day-strip .c1 { background: #b9c9ad; }
+.day-strip .c2 { background: #7ba06f; }
+.day-strip .c3 { background: #3f6b40; }
+.day-strip .today { outline: 1px solid var(--ink); }
+
+.strip-caption {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 3px;
+}
+
+/* barras (temas y dificultad) */
+.bar-row {
+  display: grid;
+  grid-template-columns: 92px 1fr 2.2em;
+  align-items: center;
+  gap: 8px;
+  padding: 2.5px 0;
+  font-size: 12.5px;
+}
+.bar-row .bl { color: var(--ink-soft); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.bar-row .bar { height: 8px; background: var(--hairline-soft); position: relative; }
+.bar-row .bar i { position: absolute; inset: 0 auto 0 0; background: var(--ink); }
+.bar-row .bn { text-align: right; color: var(--ink-soft); }
+
+.none-note { font-size: 12.5px; color: var(--muted); font-style: italic; }
+
+/* ————— Pie ————— */
+
+.colophon { margin-top: 30px; text-align: center; }
+.colophon p { font-size: 12.5px; color: var(--muted); margin-top: 12px; }
+
+/* ————— Responsive ————— */
+
+@media (max-width: 860px) {
+  .panels { grid-template-columns: 1fr; }
+  .summary-strip { grid-template-columns: repeat(2, 1fr); }
+  .summary-cell:nth-child(n+3) { border-top: 1px solid var(--hairline); }
+  .summary-cell:nth-child(3) { border-left: none; }
+  .masthead h1 { font-size: 34px; }
+}
